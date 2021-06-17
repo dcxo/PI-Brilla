@@ -76,13 +76,6 @@
             <Link to="/signup">Sign up</Link>
             <input type="submit" value="Log in" />
         </div>
-        <p>
-            Forgot password? <a
-                on:click={() => {
-                    alert("h");
-                }}>Click here to restore</a
-            >
-        </p>
     </form>
     <div />
 </section>

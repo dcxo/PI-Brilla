@@ -50,7 +50,7 @@ func sendMail(to string, token string) (err error) {
 	}
 	msg += fmt.Sprintf(emailBody, token)
 
-	err = smtp.SendMail(emailHost+":587", auth, emailFrom, toA, []byte(msg))
+	err = smtp.SendMail(emailHost+":25", auth, emailFrom, toA, []byte(msg))
 	fmt.Println(err)
 	return
 

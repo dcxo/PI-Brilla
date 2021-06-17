@@ -94,14 +94,9 @@
 
 <main>
     <section>
-    {#if brights.length == 0}
-        <p>No hay brillos para mostrar..</p>
-        <!-- <div> -->
-        <img src={Tumbleweed} alt="animacion" />
-        <!-- <img src="~/assets/tumbleweed.png" alt=" " /> -->
-        <!-- </div> -->
-    {:else}
-        
+        {#if brights.length == 0}
+            <p>No hay brillos para mostrar..</p>
+        {:else}
             {#each brights as bright}
                 <Brillo
                     user={{
@@ -124,8 +119,8 @@
                 distance={200}
                 on:infinite={(e) => fetchBrights(brights.length, e)}
             />
-        </section>
-    {/if}
+        {/if}
+    </section>
 
     <div class:active={see}>
         <button on:click={() => (see = false)}><Close /></button>
